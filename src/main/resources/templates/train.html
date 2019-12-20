@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title> Spring Boot</title>
+</head>
+ 
+<body>
+  <h1>Lista de Pokemons</h1>
+  <table>
+    <thead>
+      <tr>
+        <th> ID </th>
+        <th> Nome </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="treinador: ${train}">  
+        <td th:text="${treinador.id}"></td>
+        <td th:text="${treinador.nome}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
